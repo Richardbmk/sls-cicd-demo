@@ -13,11 +13,9 @@ phases:
       - npm install
   build:
     commands:
-      - Deploying the app..
       - echo Deployment started on `date`
       - echo Deployment with Serverless Framework
       - sls deploy -v -s $ENV_NAME
   post_build:
     commands:
-      - End of build...
       - echo Deployment completed on `date`
