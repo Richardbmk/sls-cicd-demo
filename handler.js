@@ -1,4 +1,5 @@
 'use strict';
+const moment = require('moment');
 
 module.exports.logger = async event => {
   return {
@@ -7,7 +8,7 @@ module.exports.logger = async event => {
       {
         message: 'Serverless CI/CD Demo',
         version: 'v2.0',
-        timestamp: new Date()
+        timestamp: moment().unix()
       }),
   };
 };
