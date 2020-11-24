@@ -3,19 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 12.x
+      nodejs: 12
     commands:
       - echo Install Serverless...
       - npm install -g serverless 
     pre_build:
       commands:
-        - echo Install source npm
-        - npm install 
+        - echo Install source npm dependencies...
+        - npm install
     build:
       commands:
-        - echo Deployment started on `data`
+        - Deploying the app..
+        - echo Deployment started on `date`
         - echo Deployment with Serverless Framework
-        - serverless deploy -v -s $ENV_NAME
+        - sls deploy -v -s $ENV_NAME
     post_build:
       commands:
-        - echo Deployment completed on `data`
+        - End of build...
+        - echo Deployment completed on `date`
