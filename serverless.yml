@@ -12,7 +12,7 @@ provider:
 
 
 functions:
-  hello:
+  logger:
     handler: handler.logger
     events:
       - http:
